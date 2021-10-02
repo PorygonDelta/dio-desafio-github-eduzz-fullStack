@@ -16,7 +16,7 @@ const yellow = document.querySelector('.yellow');
 
 let shuffleOrder = () => {
 	let colorOrder = Math.floor(Math.random() * 4);
-	order[order.lenght] = colorOrder;
+	order[order.length] = colorOrder;
 	clickedOrder = [];
 
 	for(let i in order) {
@@ -44,7 +44,7 @@ let checkOrder = () => {
 			break;
 		}
 	}
-	if(clickedOrder.lenght == order.lenght) {
+	if(clickedOrder.length == order.length) {
 		alert(`Pontuação: ${score}\nVocê Acertou! Iniciando Próximo Nível!!!`);
 		nextLevel();
 	}
@@ -52,7 +52,7 @@ let checkOrder = () => {
 
 //clique do jogador
 let click = (color) => {
-	clickedOrder[clickedOrder.lenght] = color;
+	clickedOrder[clickedOrder.length] = color;
 	createColorElement(color).classList.add('selected');
 
 	setTimeout (() => {
@@ -82,7 +82,7 @@ let nextLevel = () => {
 
 //GAME OVER
 let gameOver= () => {
-	alert(`Pontuação: $(score)!\nVocê PERDEU!!!\nClique em OK para iniciar um novo jogo`);
+	alert(`Pontuação: ${score}!\nVocê PERDEU!!!\nClique em OK para iniciar um novo jogo`);
 	order = [];
 	clickedOrder = [];
 
